@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+
+  nginx:
+    depends_on:
+      - php
+    image: nginx:1.18
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./conf/nginx:/etc/nginx/conf.d
+      - ./dist:/var/www/html
+    
+
+  php:
+    #build: ./php
+    image: php:7.4-fpm
+    container_name: php
+    #ports:
+    #  - "9000:9000"
+    volumes:
+      - ./dist:/var/www/html
+      - ./conf/php/php.ini:/usr/local/etc/php/conf.d/40-custom.ini
+
+  dev:
+    #image: node:14
+    build: 
+      context: .
+      dockerfile: Dockerfile-dev
+    container_name: dev
+    volumes:
+      - ./app:/var/www/app
+      - ./dist:/var/www/dist
