@@ -13,6 +13,7 @@ services:
     volumes:
       - ./conf/nginx:/etc/nginx/conf.d
       - ./dist:/var/www/html
+      - ./conf/ssl:/etc/ssl/aristov.tech
     
 
   php:

@@ -262,16 +262,6 @@ h1, h2 {
     font-size:18px;
     line-height: 30px;
     font-weight: 500;
-    & a {
-        color: $mainColor;
-        text-decoration:none;
-        transition: all 0.3s;
-    }
-    & a:hover {
-        text-decoration:underline;
-        color: #5e07cd;
-        transition: all 0.3s;
-    }
 }
 
 .skillsItem__text {
@@ -286,11 +276,10 @@ h1, h2 {
     }
     & a {
         color:$mainColor;
-        text-decoration:none;
+        text-decoration:underline;
         transition: all 0.3s;
     }
     & a:hover {
-        text-decoration:underline;
         color: #5e07cd;
         transition: all 0.3s;
     }
