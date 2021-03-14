@@ -187,7 +187,7 @@ h1, h2 {
 }
 
 .about__text {
-    font-weight: 200;
+    font-weight: 300;
     line-height: 1.5;
     padding-top: 24px;
     font-size: 18px;
@@ -262,6 +262,16 @@ h1, h2 {
     font-size:18px;
     line-height: 30px;
     font-weight: 500;
+    & a {
+        color: $mainColor;
+        text-decoration:none;
+        transition: all 0.3s;
+    }
+    & a:hover {
+        text-decoration:underline;
+        color: #5e07cd;
+        transition: all 0.3s;
+    }
 }
 
 .skillsItem__text {
@@ -273,6 +283,16 @@ h1, h2 {
         padding:0;
         margin:0;
         list-style: none;
+    }
+    & a {
+        color:$mainColor;
+        text-decoration:none;
+        transition: all 0.3s;
+    }
+    & a:hover {
+        text-decoration:underline;
+        color: #5e07cd;
+        transition: all 0.3s;
     }
 }
 
