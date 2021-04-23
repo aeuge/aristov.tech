@@ -103,7 +103,7 @@ function watching() {
     watch(['app/**/*.php'],build_php).on('change',browserSync.reload);
     watch(['app/scss/**/*.scss'],build_css);
     watch(['app/js/**/*.js'],build_scripts);
-    watch(['app/img/**/*'],series(delImg,build_images));
+    watch(['app/img/**/*'],series(delImg,build_images,build_webp));
     watch(['app/fonts/**/*'],series(delFonts,build_fonts));
 }
 
